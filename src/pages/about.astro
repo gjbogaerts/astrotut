@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 const pageTitle = 'ABOUT me';
 const identity = {
 	firstName: "GJ",
@@ -38,10 +40,7 @@ const textCase = "uppercase";
 	</head>
 	<body>
 
-		<a href="/">Home</a>
-		<a href="/about">About</a>
-
-		<a href="/blog">Blog</a>
+		<Header />
 		<h1>{pageTitle}</h1>
 		<h2>... And my new astro site</h2>
 		<p>I'm working through Astro's new astro tutotial. It can be visited online on <a href='gjb-tut-astro.netlify.app'>Netlify</a>.</p>
@@ -64,6 +63,9 @@ const textCase = "uppercase";
 		{happy && <p>I am happy to be learning Astro</p>}
 		{finished && <p>I finished this tutorial</p>}
 		{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
-
+<Footer />
+<script>
+	import '../scripts/menu';
+</script>
 	</body>
 </html>
